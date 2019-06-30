@@ -95,7 +95,7 @@ ynh_print_info "Installing dependencies..."
 ###		- As well as the section "REINSTALL DEPENDENCIES" in the restore script
 ###		- And the section "UPGRADE DEPENDENCIES" in the upgrade script
 
-#ynh_install_app_dependencies postgresql
+ynh_install_app_dependencies postgresql
 
 #=================================================
 # CREATE A POSTGRESQL DATABASE
@@ -115,8 +115,8 @@ db_name=$(ynh_sanitize_dbid $app)
 db_pwd=$(ynh_string_random 8)
 ynh_app_setting_set $app db_name $db_name
 ynh_app_setting_set $app db_pwd $db_pwd
-ynh_mysql_test_if_first_run
-ynh_mysql_create_db $db_name $db_name $db_pwd
+ynh_psql_test_if_first_run
+ynh_psql_create_db $db_name $db_name $db_pwd
 
 #=================================================
 # CREATE DEDICATED USER
