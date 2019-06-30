@@ -1,5 +1,9 @@
 # GLPI app for YunoHost
 
+# NOT WORK IS IN DEV
+
+**Shipped version:** 9.4.3
+
 - [Yunohost project](https://yunohost.org)
 - [GLPI website](https://glpi-project.org/)
 
