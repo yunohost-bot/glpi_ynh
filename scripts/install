@@ -95,11 +95,7 @@ ynh_print_info "Installing dependencies..."
 ###		- As well as the section "REINSTALL DEPENDENCIES" in the restore script
 ###		- And the section "UPGRADE DEPENDENCIES" in the upgrade script
 
-#ynh_install_app_dependencies postgresql ruby-dev zlib1g-dev libpq-dev
-
-#ynh_print_info "Installing Rails & Bunlder..."
-
-#gem install rails:5.2.2 bundler:2.0.1
+#ynh_install_app_dependencies postgresql
 
 #=================================================
 # CREATE A POSTGRESQL DATABASE
@@ -119,8 +115,8 @@ db_name=$(ynh_sanitize_dbid $app)
 db_pwd=$(ynh_string_random 8)
 ynh_app_setting_set $app db_name $db_name
 ynh_app_setting_set $app db_pwd $db_pwd
-ynh_psql_test_if_first_run
-ynh_psql_create_db $db_name $db_name $db_pwd
+ynh_mysql_test_if_first_run
+ynh_mysql_create_db $db_name $db_name $db_pwd
 
 #=================================================
 # CREATE DEDICATED USER
@@ -142,32 +138,14 @@ ynh_setup_source "$final_path"
 #=================================================
 # MODIFY A CONFIG FILE
 #=================================================
-ynh_print_info "Install Redmine Conffiguration..."
+#ynh_print_info "Install Redmine Conffiguration..."
 
-cp -a ../conf/database.example.yml $final_path/config/database.yml
+#cp -a ../conf/database.example.yml $final_path/config/database.yml
 
 #ynh_replace_string "2.5.3"      "2.3.3"       "/opt/redmine/Gemfile"
-ynh_replace_string "yunouser"   "$db_name"    "$final_path/config/database.yml"
-ynh_replace_string "yunopass"   "$db_pwd"     "$final_path/config/database.yml"
-ynh_replace_string "yunobase"   "$db_name"    "$final_path/config/database.yml"
-
-#=================================================
-# COMPILE REDMINE
-#=================================================
-ynh_print_info "Compile Redmine..."
-
-pushd $final_path
-bundle install --without development test rmagick
-RAILS_ENV=production bin/rake generate_secret_token
-RAILS_ENV=production bin/rake db:migrate
-popd
-
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-
-ynh_add_systemd_config
-systemctl enable $app.service
+#ynh_replace_string "yunouser"   "$db_name"    "$final_path/config/database.yml"
+#ynh_replace_string "yunopass"   "$db_pwd"     "$final_path/config/database.yml"
+#ynh_replace_string "yunobase"   "$db_name"    "$final_path/config/database.yml"
 
 #=================================================
 # NGINX CONFIGURATION
@@ -205,7 +183,7 @@ ynh_add_nginx_config
 ### that really need such authorization.
 
 # Set permissions to app files
-chown -R $app:$app $final_path
+chgrp www-data $final_path/{config,files,files/_{dumps,sessions,cron,graphs,lock,plugins,tmp,rss,uploads,pictures,log}}
 
 #=================================================
 # SETUP SSOWAT
@@ -218,5 +196,4 @@ if [ $is_public -eq 1 ]; then
 fi
 
 # Reload services
-systemctl start $app.service
 systemctl reload nginx
