@@ -183,7 +183,7 @@ ynh_add_nginx_config
 ### that really need such authorization.
 
 # Set permissions to app files
-chgrp www-data $final_path/{config,files,files/_{dumps,sessions,cron,graphs,lock,plugins,tmp,rss,uploads,pictures,log}}
+chown -R www-data:www-data $final_path
 
 #=================================================
 # SETUP SSOWAT
