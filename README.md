@@ -17,10 +17,6 @@
  App can be installed by YunoHost **admin web-interface** or by **running following command**:
 
         $ sudo yunohost app install --debug https://github.com/YunoHost-Apps/glpi_ynh
-         
-         After Install
-         
-         1. Login in redmine with admin / admin
 
  
 ### Upgrade this package:
