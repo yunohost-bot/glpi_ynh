@@ -21,4 +21,4 @@
  
 ### Upgrade this package:
 
-        $ sudo yunohost app upgrade redmine -u https://github.com/YunoHost-Apps/glpi_ynh
+        $ sudo yunohost app upgrade glpi -u https://github.com/YunoHost-Apps/glpi_ynh
