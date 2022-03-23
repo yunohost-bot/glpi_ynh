@@ -1,0 +1,1 @@
+*/1 * * * * root /usr/bin/php__PHPVERSION__ __FINALPATH__/front/cron.php &>/dev/null
