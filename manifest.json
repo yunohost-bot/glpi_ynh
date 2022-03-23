@@ -3,55 +3,47 @@
     "id": "glpi",
     "packaging_format": 1,
     "description": {
-        "en": "GLPI package for YunoHost.",
-        "fr": "GLPI pour YunoHost."
+        "en": "IT Asset Management.",
+        "fr": "Gestion des services informatiques (ITSM)."
     },
-    "version": "9.4.3",
+    "version": "9.5.7~ynh1",
     "url": "https://glpi-project.org/",
+    "upstream": {
+        "license": "GPL-2.0",
+        "website": "https://glpi-project.org",
+        "admindoc": "https://glpi-install.readthedocs.io/en/latest/",
+        "code": "https://github.com/glpi-project/glpi"
+    },
     "license": "GPL-2.0",
     "maintainer": {
         "name": "liberodark",
         "email": "liberodark@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 2.7.2"
+        "yunohost": ">= 4.3.0"
     },
-    "multi_instance": false,
+    "multi_instance": true,
     "services": [
         "nginx",
-        "php5-fpm",
+        "php7.3-fpm",
         "mysql"
     ],
     "arguments": {
-        "install": [{
+        "install": [
+            {
                 "name": "domain",
-                "type": "domain",
-                "ask": {
-                    "en": "Choose a domain name for GLPI",
-                    "fr": "Choisissez un nom de domaine pour GLPI"
-                },
-                "example": "example.com"
+                "type": "domain"
             },
-
             {
                 "name": "path",
                 "type": "path",
-                "ask": {
-                    "en": "Choose a path for GLPI /glpi is accepted",
-                    "fr": "Choisissez un chemin pour GLPI /glpi est accepté"
-                },
                 "example": "/glpi",
                 "default": "/glpi"
             },
-            
             {
                 "name": "is_public",
                 "type": "boolean",
-                "ask": {
-                    "en": "Is it a public site ?",
-                    "fr": "Est-ce un site public ?"
-                },
-                "default": "true"
+                "default": true
             }
         ]
     }
