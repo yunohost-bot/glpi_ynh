@@ -2,7 +2,7 @@
 
 # NOT WORK IS IN DEV
 
-**Shipped version:** 9.4.3
+**Shipped version:** 9.5.7
 
 - [Yunohost project](https://yunohost.org)
 - [GLPI website](https://glpi-project.org/)
