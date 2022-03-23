@@ -3,8 +3,8 @@
     "id": "glpi",
     "packaging_format": 1,
     "description": {
-        "en": "GLPI package for YunoHost.",
-        "fr": "GLPI pour YunoHost."
+        "en": "IT Asset Management.",
+        "fr": "Gestion des services informatiques (ITSM)."
     },
     "version": "9.5.7~ynh1",
     "url": "https://glpi-project.org/",
