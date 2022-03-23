@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-GLPI pour YunoHost.
+Gestion des services informatiques (ITSM).
 
 **Version incluse :** 9.5.7~ynh1
 

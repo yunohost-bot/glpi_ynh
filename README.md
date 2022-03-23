@@ -15,7 +15,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-GLPI package for YunoHost.
+IT Asset Management.
 
 **Shipped version:** 9.5.7~ynh1
 
