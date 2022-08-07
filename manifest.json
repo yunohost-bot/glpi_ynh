@@ -12,7 +12,8 @@
         "license": "GPL-2.0",
         "website": "https://glpi-project.org",
         "admindoc": "https://glpi-install.readthedocs.io/en/latest/",
-        "code": "https://github.com/glpi-project/glpi"
+        "code": "https://github.com/glpi-project/glpi",
+        "cpe": "cpe:2.3:a:glpi-project:glpi"
     },
     "license": "GPL-2.0",
     "maintainer": {
