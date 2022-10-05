@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 IT Asset Management.
 
-**Shipped version:** 10.0.3~ynh1 *(:warning: This is the `testing` branch. The [`master` branch](https://github.com/YunoHost-Apps/glpi_ynh/tree/master) used in the catalog is currently on version 9.5.7\~ynh1.)*
+**Shipped version:** 10.0.3~ynh1
 
 
 ## Screenshots
