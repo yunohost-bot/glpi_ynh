@@ -17,7 +17,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Gestion des services informatiques (ITSM).
 
-**Version incluse :** 9.5.7~ynh1
+**Version incluse :** 10.0.3~ynh1 *(:warning: Il s'agit de la branche `upgrade`. La [branche `master`](https://github.com/YunoHost-Apps/glpi_ynh/tree/master) utilisée dans le catalogue est actuellement en 9.5.7\~ynh1.)*
 
 
 ## Captures d'écran
