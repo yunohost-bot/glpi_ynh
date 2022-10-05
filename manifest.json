@@ -6,18 +6,19 @@
         "en": "IT Asset Management.",
         "fr": "Gestion des services informatiques (ITSM)."
     },
-    "version": "9.5.7~ynh1",
+    "version": "10.0.3~ynh1",
     "url": "https://glpi-project.org/",
     "upstream": {
         "license": "GPL-2.0",
         "website": "https://glpi-project.org",
         "admindoc": "https://glpi-install.readthedocs.io/en/latest/",
-        "code": "https://github.com/glpi-project/glpi"
+        "code": "https://github.com/glpi-project/glpi",
+        "cpe": "cpe:2.3:a:glpi-project:glpi"
     },
     "license": "GPL-2.0",
     "maintainer": {
-        "name": "liberodark",
-        "email": "liberodark@gmail.com"
+        "name": "",
+        "email": ""
     },
     "requirements": {
         "yunohost": ">= 4.3.0"
