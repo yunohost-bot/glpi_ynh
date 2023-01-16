@@ -5,29 +5,29 @@ It shall NOT be edited by hand.
 
 # GLPI pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)  
 [![Installer GLPI avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=glpi)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer GLPI rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer GLPI rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 Gestion des services informatiques (ITSM).
 
 **Version incluse :** 10.0.5~ynh1
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de GLPI](./doc/screenshots/screenshot.png)
+![Capture d’écran de GLPI](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://glpi-project.org>
-* Documentation officielle de l'admin : <https://glpi-install.readthedocs.io/en/latest/>
-* Dépôt de code officiel de l'app : <https://github.com/glpi-project/glpi>
+* Site officiel de l’app : <https://glpi-project.org>
+* Documentation officielle de l’admin : <https://glpi-install.readthedocs.io/en/latest/>
+* Dépôt de code officiel de l’app : <https://github.com/glpi-project/glpi>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_glpi>
 * Signaler un bug : <https://github.com/YunoHost-Apps/glpi_ynh/issues>
 
@@ -43,4 +43,4 @@ ou
 sudo yunohost app upgrade glpi -u https://github.com/YunoHost-Apps/glpi_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
