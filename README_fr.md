@@ -15,7 +15,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-Gestion des services informatiques (ITSM).
+Gestion des services informatiques (ITSM)
 
 **Version incluse :** 10.0.5~ynh1
 
