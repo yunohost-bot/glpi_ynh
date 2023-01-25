@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # GLPI for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Working status](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Working status](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)
 [![Install GLPI with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=glpi)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 IT Asset Management
 
-**Shipped version:** 10.0.5~ynh1
+**Shipped version:** 10.0.6~ynh1
 
 ## Screenshots
 
