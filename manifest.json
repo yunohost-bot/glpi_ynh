@@ -3,10 +3,10 @@
     "id": "glpi",
     "packaging_format": 1,
     "description": {
-        "en": "IT Asset Management.",
-        "fr": "Gestion des services informatiques (ITSM)."
+        "en": "IT Asset Management",
+        "fr": "Gestion des services informatiques (ITSM)"
     },
-    "version": "10.0.5~ynh2",
+    "version": "10.0.6~ynh1",
     "url": "https://glpi-project.org/",
     "upstream": {
         "license": "GPL-2.0",
@@ -21,7 +21,7 @@
         "email": ""
     },
     "requirements": {
-        "yunohost": ">= 4.3.0"
+        "yunohost": ">= 11.0.9"
     },
     "multi_instance": true,
     "services": [
