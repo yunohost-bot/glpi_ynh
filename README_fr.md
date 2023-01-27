@@ -5,29 +5,42 @@ It shall NOT be edited by hand.
 
 # GLPI pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)
 [![Installer GLPI avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=glpi)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer GLPI rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer GLPI rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
-Gestion des services informatiques (ITSM).
+GLPI stands for Gestionnaire Libre de Parc Informatique is a Free Asset and IT Management Software package, that provides ITIL Service Desk features, licenses tracking and software auditing.
 
-**Version incluse :** 10.0.5~ynh1
+### Features:
 
-## Captures d'écran
+- Inventory of computers, peripherals, network printers and any associated components through an interface, with inventory tools such as: FusionInventory or OCS Inventory
+- Data Center Infrastructure Management (DCIM)
+- Item lifecycle management
+- Licenses management (ITIL compliant)
+- Management of warranty and financial information (purchase order, warranty and extension, damping)
+- Management of contracts, contacts, documents related to inventory items
+- Incidents, requests, problems and changes management
+- Knowledge base and Frequently-Asked Questions (FAQ)
+- Asset reservation
 
-![Capture d'écran de GLPI](./doc/screenshots/screenshot.png)
+
+**Version incluse :** 10.0.6~ynh1
+
+## Captures d’écran
+
+![Capture d’écran de GLPI](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://glpi-project.org>
-* Documentation officielle de l'admin : <https://glpi-install.readthedocs.io/en/latest/>
-* Dépôt de code officiel de l'app : <https://github.com/glpi-project/glpi>
+* Site officiel de l’app : <https://glpi-project.org>
+* Documentation officielle de l’admin : <https://glpi-install.readthedocs.io/en/latest/>
+* Dépôt de code officiel de l’app : <https://github.com/glpi-project/glpi>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_glpi>
 * Signaler un bug : <https://github.com/YunoHost-Apps/glpi_ynh/issues>
 
@@ -43,4 +56,4 @@ ou
 sudo yunohost app upgrade glpi -u https://github.com/YunoHost-Apps/glpi_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>

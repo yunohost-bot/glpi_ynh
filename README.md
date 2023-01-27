@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # GLPI for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Working status](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![Working status](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)
 [![Install GLPI with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=glpi)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -15,9 +15,22 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-IT Asset Management.
+GLPI stands for Gestionnaire Libre de Parc Informatique is a Free Asset and IT Management Software package, that provides ITIL Service Desk features, licenses tracking and software auditing.
 
-**Shipped version:** 10.0.5~ynh1
+### Features:
+
+- Inventory of computers, peripherals, network printers and any associated components through an interface, with inventory tools such as: FusionInventory or OCS Inventory
+- Data Center Infrastructure Management (DCIM)
+- Item lifecycle management
+- Licenses management (ITIL compliant)
+- Management of warranty and financial information (purchase order, warranty and extension, damping)
+- Management of contracts, contacts, documents related to inventory items
+- Incidents, requests, problems and changes management
+- Knowledge base and Frequently-Asked Questions (FAQ)
+- Asset reservation
+
+
+**Shipped version:** 10.0.6~ynh1
 
 ## Screenshots
 
