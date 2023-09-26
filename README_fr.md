@@ -16,20 +16,19 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-GLPI stands for Gestionnaire Libre de Parc Informatique is a Free Asset and IT Management Software package, that provides ITIL Service Desk features, licenses tracking and software auditing.
+GLPI signifie Gestionnaire Libre de Parc Informatique. Il s'agit d'un progiciel gratuit de gestion des actifs et de l'informatique, qui fournit des fonctionnalités ITIL Service Desk, le suivi des licences et l'audit des logiciels.
 
-### Features:
+### Caractéristiques :
 
-- Inventory of computers, peripherals, network printers and any associated components through an interface, with inventory tools such as: FusionInventory or OCS Inventory
-- Data Center Infrastructure Management (DCIM)
-- Item lifecycle management
-- Licenses management (ITIL compliant)
-- Management of warranty and financial information (purchase order, warranty and extension, damping)
-- Management of contracts, contacts, documents related to inventory items
-- Incidents, requests, problems and changes management
-- Knowledge base and Frequently-Asked Questions (FAQ)
-- Asset reservation
-
+- Inventaire des ordinateurs, périphériques, imprimantes réseau et de tous composants associés via une interface, avec des outils d'inventaire tels que : FusionInventory ou OCS Inventory
+- Gestion de l'infrastructure du centre de données (DCIM)
+- Gestion du cycle de vie des articles
+- Gestion des licences (conforme ITIL)
+- Gestion des informations de garantie et financières (bon de commande, garantie et extension, amortissement)
+- Gestion des contrats, contacts, documents liés aux articles en stock
+- Gestion des incidents, demandes, problèmes et changements
+- Base de connaissances et foire aux questions (FAQ)
+- Réservation d'actifs
 
 **Version incluse :** 10.0.10~ynh1
 
