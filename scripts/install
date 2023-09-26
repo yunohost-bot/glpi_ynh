@@ -43,6 +43,7 @@ ynh_script_progression --message="Installing the database..." --weight=1
 pushd $install_dir
 	php$phpversion bin/console glpi:database:install --db-host="localhost" --db-name="$db_name" --db-password="$db_pwd" --db-user="$db_user" --reconfigure --no-interaction
 	php$phpversion bin/console glpi:config:set url_base https://$domain$path
+	ynh_secure_remove --file="$install_dir/install/install.php"
 popd
 
 #=================================================
