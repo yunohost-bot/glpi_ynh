@@ -21,15 +21,17 @@ chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
 #=================================================
-# PHP-FPM CONFIGURATION
+# SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring PHP-FPM..." --weight=1
+ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
 
 # Create a dedicated PHP-FPM config
 ynh_add_fpm_config
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
+
+ynh_add_config --template="../conf/cron" --destination="/etc/cron.d/$app"
 
 #=================================================
 # SPECIFIC SETUP
@@ -42,13 +44,6 @@ pushd $install_dir
 	php$phpversion bin/console glpi:database:install --db-host="localhost" --db-name="$db_name" --db-password="$db_pwd" --db-user="$db_user" --reconfigure --no-interaction
 	php$phpversion bin/console glpi:config:set url_base https://$domain$path
 popd
-
-#=================================================
-# CONFIGURE CRON
-#=================================================
-ynh_script_progression --message="Configuring a cron file..." --weight=1
-
-ynh_add_config --template="../conf/cron" --destination="/etc/cron.d/$app"
 
 #=================================================
 # END OF SCRIPT

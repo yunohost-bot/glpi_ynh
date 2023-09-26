@@ -31,15 +31,17 @@ chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
 #=================================================
-# PHP-FPM CONFIGURATION
+# REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=1
+ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
 
 # Create a dedicated PHP-FPM config
 ynh_add_fpm_config
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
+
+ynh_add_config --template="../conf/cron" --destination="/etc/cron.d/$app"
 
 #=================================================
 # SPECIFIC UPGRADE
@@ -49,15 +51,8 @@ ynh_add_nginx_config
 ynh_script_progression --message="Updating the database..." --weight=1
 
 pushd $install_dir
-	php$phpversion bin/console db:update --no-interaction
+	php$phpversion bin/console db:update --no-interaction --no-telemetry
 popd
-
-#=================================================
-# UPDATE CRON
-#=================================================
-ynh_script_progression --message="Updating a cron file..." --weight=1
-
-ynh_add_config --template="../conf/cron" --destination="/etc/cron.d/$app"
 
 #=================================================
 # END OF SCRIPT
