@@ -25,9 +25,6 @@ ynh_change_url_nginx_config
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-#domain=$new_domain
-#path=new_path
-
 pushd $install_dir
 	php$phpversion bin/console glpi:config:set url_base https://$domain$path
 popd
