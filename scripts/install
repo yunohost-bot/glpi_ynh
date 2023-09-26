@@ -38,7 +38,7 @@ ynh_add_config --template="../conf/cron" --destination="/etc/cron.d/$app"
 #=================================================
 # INSTALL THE DATABASE
 #=================================================
-ynh_script_progression --message="Installing the database..." --weight=1
+ynh_script_progression --message="Installing $app..." --weight=1
 
 pushd $install_dir
 	php$phpversion bin/console glpi:database:install --db-host="localhost" --db-name="$db_name" --db-password="$db_pwd" --db-user="$db_user" --reconfigure --no-interaction
