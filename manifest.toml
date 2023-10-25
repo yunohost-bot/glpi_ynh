@@ -1,0 +1,57 @@
+packaging_format = 2
+
+id = "glpi"
+name = "GLPI"
+description.en = "IT Asset Management"
+description.fr = "Gestion des services informatiques (ITSM)"
+
+version = "10.0.10~ynh1"
+
+maintainers = []
+
+[upstream]
+license = "GPL-2.0"
+website = "https://glpi-project.org"
+admindoc = "https://glpi-install.readthedocs.io/en/latest/"
+code = "https://github.com/glpi-project/glpi"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "200M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/glpi"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+        [resources.sources.main]
+        url = "https://github.com/glpi-project/glpi/releases/download/10.0.10/glpi-10.0.10.tgz"
+        sha256 = "b303eece25bcbf81cd6bcd74b2a8412f02b33c3471bd935530b06470dcf7b051"
+        autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.apt]
+    packages = "mariadb-server, php8.2-cli,php8.2-curl, php8.2-fileinfo, php8.2-gd, php8.2-mbstring, php8.2-mysqli, php8.2-simplexml, php8.2-xml, php8.2-intl, php8.2-ldap, php8.2-xmlrpc, php8.2-bz2, php8.2-zip"
+
+    [resources.database]
+    type = "mysql"
