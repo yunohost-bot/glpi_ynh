@@ -42,7 +42,6 @@ GLPI stands for Gestionnaire Libre de Parc Informatique is a Free Asset and IT M
 * Official app website: <https://glpi-project.org>
 * Official admin documentation: <https://glpi-install.readthedocs.io/en/latest/>
 * Upstream app code repository: <https://github.com/glpi-project/glpi>
-* YunoHost documentation for this app: <https://yunohost.org/app_glpi>
 * Report a bug: <https://github.com/YunoHost-Apps/glpi_ynh/issues>
 
 ## Developer info
