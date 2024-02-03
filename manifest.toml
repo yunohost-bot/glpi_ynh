@@ -39,8 +39,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/glpi-project/glpi/archive/refs/tags/10.0.12.tar.gz"
-        sha256 = "e3911e4e143648dea8e1e0ef59266abceda0209ba1413104e8ea549b7ab0bbce"
+        url = "https://github.com/glpi-project/glpi/releases/download/10.0.12/glpi-10.0.12.tgz"
+        sha256 = "7980cd5f9ab10dc234e1e42950acd42c2977e5c3da4d540ef000e9caa72cec85"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
