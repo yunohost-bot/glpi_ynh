@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 GLPI
+# YunoHost 上的 GLPI
 
 [![集成程度](https://dash.yunohost.org/integration/glpi.svg)](https://dash.yunohost.org/appci/app/glpi) ![工作状态](https://ci-apps.yunohost.org/ci/badges/glpi.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/glpi.maintain.svg)
 
