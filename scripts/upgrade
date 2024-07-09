@@ -47,6 +47,7 @@ ynh_add_config --template="cron" --destination="/etc/cron.d/$app"
 ynh_script_progression --message="Updating the database..." --weight=1
 
 pushd $install_dir
+	php$phpversion bin/console system:check_requirements
 	php$phpversion bin/console db:update --no-interaction --no-telemetry --force
 popd
 
