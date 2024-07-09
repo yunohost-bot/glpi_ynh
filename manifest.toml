@@ -41,10 +41,11 @@ ram.runtime = "50M"
     default = "visitors"
 
 [resources]
-        [resources.sources.main]
-        url = "https://github.com/glpi-project/glpi/releases/download/10.0.15/glpi-10.0.15.tgz"
-        sha256 = "8ce94c1403c1143a5b503f18f7b7b9a5d29e83489fc81cc7287b719df0b97236"
-        autoupdate.strategy = "latest_github_tag"
+    [resources.sources.main]
+    url = "https://github.com/glpi-project/glpi/releases/download/10.0.15/glpi-10.0.15.tgz"
+    sha256 = "8ce94c1403c1143a5b503f18f7b7b9a5d29e83489fc81cc7287b719df0b97236"
+
+    autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
@@ -54,7 +55,22 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "mariadb-server, php8.2-cli, php8.2-curl, php8.2-fileinfo, php8.2-gd, php8.2-mbstring, php8.2-mysqli, php8.2-simplexml, php8.2-xml, php8.2-intl, php8.2-ldap, php8.2-xmlrpc, php8.2-bz2, php8.2-zip"
+    packages = [
+        "mariadb-server",
+        "php8.2-cli",
+        "php8.2-curl",
+        "php8.2-fileinfo",
+        "php8.2-gd",
+        "php8.2-mbstring",
+        "php8.2-mysqli",
+        "php8.2-simplexml",
+        "php8.2-xml",
+        "php8.2-intl",
+        "php8.2-ldap",
+        "php8.2-xmlrpc",
+        "php8.2-bz2",
+        "php8.2-zip",
+    ]
 
     [resources.database]
     type = "mysql"
