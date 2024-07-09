@@ -45,7 +45,8 @@ ram.runtime = "50M"
     url = "https://github.com/glpi-project/glpi/releases/download/10.0.15/glpi-10.0.15.tgz"
     sha256 = "8ce94c1403c1143a5b503f18f7b7b9a5d29e83489fc81cc7287b719df0b97236"
 
-    autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset = "^glpi-.*\\.tgz"
 
     [resources.system_user]
 
