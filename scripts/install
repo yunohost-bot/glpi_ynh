@@ -1,8 +1,6 @@
 #!/bin/bash
 
 #=================================================
-# GENERIC START
-#=================================================
 # IMPORT GENERIC HELPERS
 #=================================================
 
@@ -21,6 +19,18 @@ chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
 #=================================================
+# INSTALL THE DATABASE
+#=================================================
+ynh_script_progression --message="Installing $app..." --weight=1
+
+pushd "$install_dir"
+	"php$phpversion" bin/console glpi:database:install --db-host="localhost" \
+		--db-name="$db_name" --db-password="$db_pwd" --db-user="$db_user" --reconfigure --no-interaction
+	"php$phpversion" bin/console glpi:config:set url_base "https://$domain$path"
+	ynh_secure_remove --file="$install_dir/install/install.php"
+popd
+
+#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
@@ -32,19 +42,6 @@ ynh_add_fpm_config
 ynh_add_nginx_config
 
 ynh_add_config --template="cron" --destination="/etc/cron.d/$app"
-
-#=================================================
-# SPECIFIC SETUP
-#=================================================
-# INSTALL THE DATABASE
-#=================================================
-ynh_script_progression --message="Installing $app..." --weight=1
-
-pushd $install_dir
-	php$phpversion bin/console glpi:database:install --db-host="localhost" --db-name="$db_name" --db-password="$db_pwd" --db-user="$db_user" --reconfigure --no-interaction
-	php$phpversion bin/console glpi:config:set url_base https://$domain$path
-	ynh_secure_remove --file="$install_dir/install/install.php"
-popd
 
 #=================================================
 # END OF SCRIPT
