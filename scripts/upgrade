@@ -1,19 +1,11 @@
 #!/bin/bash
 
 #=================================================
-# GENERIC START
-#=================================================
 # IMPORT GENERIC HELPERS
 #=================================================
 
 source _common.sh
 source /usr/share/yunohost/helpers
-
-#=================================================
-# CHECK VERSION
-#=================================================
-
-upgrade_type=$(ynh_check_app_version_changed)
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -24,7 +16,17 @@ ynh_script_progression --message="Upgrading source files..." --weight=1
 ynh_setup_source --dest_dir="$install_dir" #--full_replace=1
 
 chmod -R o-rwx "$install_dir"
-chown -R $app:www-data "$install_dir"
+chown -R "$app:www-data" "$install_dir"
+
+#=================================================
+# UPDATE THE DATABASE
+#=================================================
+ynh_script_progression --message="Updating the database..." --weight=1
+
+pushd "$install_dir"
+	"php$phpversion" bin/console system:check_requirements
+	"php$phpversion" bin/console db:update --no-interaction --no-telemetry --force
+popd
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
@@ -38,18 +40,6 @@ ynh_add_fpm_config
 ynh_add_nginx_config
 
 ynh_add_config --template="cron" --destination="/etc/cron.d/$app"
-
-#=================================================
-# SPECIFIC UPGRADE
-#=================================================
-# UPDATE THE DATABASE
-#=================================================
-ynh_script_progression --message="Updating the database..." --weight=1
-
-pushd $install_dir
-	php$phpversion bin/console system:check_requirements
-	php$phpversion bin/console db:update --no-interaction --no-telemetry --force
-popd
 
 #=================================================
 # END OF SCRIPT
