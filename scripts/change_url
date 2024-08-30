@@ -10,21 +10,21 @@ source /usr/share/yunohost/helpers
 #=================================================
 # MODIFY URL IN NGINX CONF
 #=================================================
-ynh_script_progression --message="Updating NGINX web server configuration..." --weight=1
+ynh_script_progression "Updating NGINX web server configuration..."
 
-ynh_change_url_nginx_config
+ynh_config_change_url_nginx
 
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring $app..." --weight=1
+ynh_script_progression "Configuring $app..."
 
 pushd "$install_dir"
-	"php$phpversion" bin/console glpi:config:set url_base "https://$domain$path"
+	"php$php_version" bin/console glpi:config:set url_base "https://$domain$path"
 popd
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Change of URL completed for $app" --last
+ynh_script_progression "Change of URL completed for $app"
